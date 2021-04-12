@@ -142,7 +142,7 @@ function showFavorits() {
 
 function sendText(evt) {
   if ((evt.keyCode === 13 || evt.keyCode === 10) && evt.ctrlKey === true) {
-     evt.preventDefault();
+    evt.preventDefault();
 
     const regExpBot = /^rabotnik: /;
     if (elInput.value.search(regExpBot) !== -1) {
@@ -193,15 +193,15 @@ async function transferHistory() {
   transferMsg.exportHistory();
 }
 
-(function() {
-  var txt = document.querySelector('textarea'),
+(function () {
+  const txt = document.querySelector('textarea');
 
-    fn = function() {
-      setTimeout(function() {
-        txt.style.height = 'auto';
-        txt.style.height = txt.scrollHeight + 'px';
-      }, 0);
-    };
+  const fn = function () {
+    setTimeout(() => {
+      txt.style.height = 'auto';
+      txt.style.height = `${txt.scrollHeight}px`;
+    }, 0);
+  };
 
   txt.addEventListener('keydown', fn, false);
-})();
+}());
