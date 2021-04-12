@@ -141,7 +141,7 @@ function showFavorits() {
 }
 
 function sendText(evt) {
-  if (evt.keyCode === 13 || evt.keyCode === 10) {
+  if ((evt.keyCode === 13 || evt.keyCode === 10) && evt.ctrlKey === true) {
      evt.preventDefault();
 
     const regExpBot = /^rabotnik: /;
