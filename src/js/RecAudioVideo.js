@@ -115,7 +115,6 @@ export default class RecAudioVideo {
               dateTime: new Date(),
             };
             this.transferMsg.sendMessage(objMessage);
-
           };
         }
         if (tVideo) {

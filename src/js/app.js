@@ -193,10 +193,11 @@ async function transferHistory() {
   transferMsg.exportHistory();
 }
 
-(function () {
+(function transfertext() {
   const txt = document.querySelector('textarea');
 
-  const fn = function () {
+  // eslint-disable-next-line no-shadow
+  const fn = function transfertext() {
     setTimeout(() => {
       txt.style.height = 'auto';
       txt.style.height = `${txt.scrollHeight}px`;
