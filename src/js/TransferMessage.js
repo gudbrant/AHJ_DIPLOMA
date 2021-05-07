@@ -56,7 +56,7 @@ export default class TransferMessage {
     const worker = new Worker();
     worker.addEventListener('message', (event) => {
       this.ws.send(JSON.stringify(event.data));
-      worker.rabotnik();
+      worker.terminate();
     });
 
     worker.postMessage({
